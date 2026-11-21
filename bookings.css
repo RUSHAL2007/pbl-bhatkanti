@@ -1,0 +1,1237 @@
+/* ==========================================================================
+   BHATKANTI — TRAVEL LEDGER STYLESHEET
+   A distinctive, premium, ticket-inspired booking management journal.
+   Strictly zero photographs. Uses deep forest-green, mint, cream, and orange.
+   Vertical chronological timeline with perforated digital ticket panels.
+   ========================================================================== */
+
+/* --------------------------------------------------------------------------
+   1. MAIN WRAPPER & CONTAINER
+   -------------------------------------------------------------------------- */
+.ledger-main {
+  background-color: var(--cream-bg);
+  min-height: calc(100vh - 180px);
+  padding: 24px 0 80px;
+}
+
+.ledger-container {
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 0 24px;
+}
+
+/* --------------------------------------------------------------------------
+   2. INTRODUCTORY PANEL (Integrated Deep Forest-Green Ledger Hero)
+   -------------------------------------------------------------------------- */
+.ledger-intro-panel {
+  background: linear-gradient(135deg, #073931 0%, #0a463c 60%, #0e5347 100%);
+  border-radius: var(--radius-xl);
+  padding: 32px 36px;
+  margin-bottom: 28px;
+  box-shadow: 0 10px 30px rgba(7, 57, 49, 0.16);
+  color: #ffffff;
+  position: relative;
+  overflow: hidden;
+  border: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+/* Subtle architectural watermark pattern in SVG (zero photographs) */
+.ledger-intro-watermark {
+  position: absolute;
+  right: -20px;
+  bottom: -30px;
+  opacity: 0.05;
+  pointer-events: none;
+  color: #ffffff;
+}
+
+.ledger-intro-top {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 20px;
+}
+
+.ledger-intro-copy {
+  max-width: 720px;
+}
+
+.ledger-tag-pill {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  background: rgba(255, 255, 255, 0.12);
+  border: 1px solid rgba(255, 255, 255, 0.22);
+  backdrop-filter: blur(8px);
+  color: #ffdebe;
+  font-size: 11px;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 1.5px;
+  padding: 5px 14px;
+  border-radius: 30px;
+  margin-bottom: 12px;
+}
+
+.ledger-title {
+  font-family: 'Playfair Display', Georgia, serif;
+  font-size: 38px;
+  font-weight: 800;
+  color: #ffffff;
+  line-height: 1.15;
+  margin-bottom: 10px;
+  letter-spacing: -0.5px;
+  text-shadow: 0 2px 10px rgba(0, 0, 0, 0.2);
+}
+
+.ledger-subtitle {
+  font-size: 15px;
+  color: rgba(255, 255, 255, 0.9);
+  line-height: 1.55;
+  margin: 0;
+}
+
+.ledger-intro-actions {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  flex-wrap: wrap;
+}
+
+.btn-ledger-new {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  background: var(--orange);
+  color: #ffffff;
+  border: 1px solid var(--orange);
+  border-radius: var(--radius-sm);
+  padding: 10px 20px;
+  font-size: 13.5px;
+  font-weight: 700;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  text-decoration: none;
+  box-shadow: 0 4px 14px rgba(241, 90, 36, 0.3);
+}
+
+.btn-ledger-new:hover {
+  background: var(--orange-hover);
+  border-color: var(--orange-hover);
+  transform: translateY(-1px);
+}
+
+.btn-ledger-plan {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  background: rgba(255, 255, 255, 0.12);
+  color: #ffffff;
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  border-radius: var(--radius-sm);
+  padding: 10px 18px;
+  font-size: 13.5px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  text-decoration: none;
+  backdrop-filter: blur(4px);
+}
+
+.btn-ledger-plan:hover {
+  background: rgba(255, 255, 255, 0.22);
+  transform: translateY(-1px);
+}
+
+/* --------------------------------------------------------------------------
+   3. COMPACT LEDGER CONTROLS (Filters, Search & Sorting)
+   -------------------------------------------------------------------------- */
+.ledger-controls-bar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 16px;
+  margin-bottom: 28px;
+  padding: 8px 0;
+}
+
+.ledger-filter-pills {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  overflow-x: auto;
+  padding: 2px 0;
+}
+
+.ledger-pill-btn {
+  background: #ffffff;
+  border: 1px solid var(--border-light);
+  color: var(--text-medium);
+  padding: 8px 16px;
+  border-radius: 30px;
+  font-size: 13px;
+  font-weight: 600;
+  cursor: pointer;
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  transition: all 0.2s ease;
+  white-space: nowrap;
+}
+
+.ledger-pill-btn:hover {
+  background: #f8faf9;
+  color: var(--dark-green);
+  border-color: #cbd5e1;
+}
+
+.ledger-pill-btn.active {
+  background: var(--dark-green);
+  color: #ffffff;
+  border-color: var(--dark-green);
+}
+
+.ledger-pill-count {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-width: 18px;
+  height: 18px;
+  padding: 0 5px;
+  border-radius: 9px;
+  font-size: 11px;
+  font-weight: 700;
+  background: rgba(0, 0, 0, 0.08);
+  color: inherit;
+}
+
+.ledger-pill-btn.active .ledger-pill-count {
+  background: rgba(255, 255, 255, 0.25);
+  color: #ffffff;
+}
+
+.ledger-search-sort {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  flex-wrap: wrap;
+}
+
+.ledger-search-box {
+  position: relative;
+  width: 280px;
+}
+
+.ledger-search-box svg {
+  position: absolute;
+  left: 12px;
+  top: 50%;
+  transform: translateY(-50%);
+  color: var(--text-muted);
+  pointer-events: none;
+}
+
+.ledger-search-input {
+  width: 100%;
+  padding: 8px 32px 8px 36px;
+  font-size: 13px;
+  border: 1px solid var(--border-light);
+  border-radius: 30px;
+  background: #ffffff;
+  color: var(--text-dark);
+  outline: none;
+  transition: all 0.2s;
+}
+
+.ledger-search-input:focus {
+  border-color: var(--dark-green);
+  box-shadow: 0 0 0 3px rgba(7, 57, 49, 0.08);
+}
+
+.ledger-search-clear {
+  position: absolute;
+  right: 10px;
+  top: 50%;
+  transform: translateY(-50%);
+  background: none;
+  border: none;
+  color: var(--text-muted);
+  cursor: pointer;
+  padding: 2px;
+  display: none;
+  border-radius: 50%;
+}
+
+.ledger-search-clear:hover {
+  color: var(--text-dark);
+}
+
+.ledger-sort-wrap {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.ledger-sort-label {
+  font-size: 12px;
+  font-weight: 600;
+  color: var(--text-muted);
+}
+
+.ledger-sort-dropdown {
+  padding: 7px 12px;
+  font-size: 12.5px;
+  font-weight: 600;
+  color: var(--text-dark);
+  border: 1px solid var(--border-light);
+  border-radius: 20px;
+  background: #ffffff;
+  cursor: pointer;
+  outline: none;
+  transition: border-color 0.2s;
+}
+
+.ledger-sort-dropdown:focus {
+  border-color: var(--dark-green);
+}
+
+/* --------------------------------------------------------------------------
+   4. CHRONOLOGICAL VERTICAL TIMELINE
+   -------------------------------------------------------------------------- */
+.ledger-timeline-container {
+  position: relative;
+  padding-left: 36px;
+  margin-top: 10px;
+}
+
+/* Vertical spine line */
+.ledger-timeline-container::before {
+  content: '';
+  position: absolute;
+  left: 12px;
+  top: 16px;
+  bottom: 24px;
+  width: 2px;
+  background: linear-gradient(180deg, #cbd5e1 0%, #e2e8f0 100%);
+  border-radius: 1px;
+}
+
+.ledger-timeline-item {
+  position: relative;
+  margin-bottom: 28px;
+}
+
+/* Timeline status node on spine */
+.ledger-timeline-node {
+  position: absolute;
+  left: -36px;
+  top: 28px;
+  width: 26px;
+  height: 26px;
+  border-radius: 50%;
+  background: #ffffff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 2;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.12);
+  transition: transform 0.2s ease;
+}
+
+.ledger-timeline-item:hover .ledger-timeline-node {
+  transform: scale(1.15);
+}
+
+.node-dot {
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+}
+
+.node-confirmed {
+  border: 2px solid #bbf7d0;
+}
+.node-confirmed .node-dot {
+  background: #16a34a;
+}
+
+.node-pending {
+  border: 2px solid #fde68a;
+}
+.node-pending .node-dot {
+  background: #d97706;
+}
+
+.node-cancelled {
+  border: 2px solid #fecaca;
+}
+.node-cancelled .node-dot {
+  background: #dc2626;
+}
+
+/* --------------------------------------------------------------------------
+   5. TICKET-INSPIRED BOOKING PANEL
+   -------------------------------------------------------------------------- */
+.ledger-ticket-card {
+  background: #ffffff;
+  border: 1px solid var(--border-light);
+  border-radius: var(--radius-lg);
+  box-shadow: var(--shadow-sm);
+  display: flex;
+  position: relative;
+  overflow: hidden;
+  transition: all 0.25s ease;
+}
+
+.ledger-ticket-card:hover {
+  box-shadow: 0 8px 24px rgba(7, 57, 49, 0.08);
+  border-color: #cbd5e1;
+  transform: translateY(-2px);
+}
+
+/* Left Ticket Stub (Date & City Column) */
+.ticket-stub {
+  width: 160px;
+  background: #f8faf9;
+  border-right: 1px dashed #cbd5e1;
+  padding: 24px 18px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  text-align: center;
+  position: relative;
+  flex-shrink: 0;
+}
+
+/* Semicircular ticket punch notches */
+.ticket-stub::before,
+.ticket-stub::after {
+  content: '';
+  position: absolute;
+  right: -8px;
+  width: 16px;
+  height: 16px;
+  background: var(--cream-bg);
+  border-radius: 50%;
+  border: 1px solid var(--border-light);
+  z-index: 2;
+}
+
+.ticket-stub::before {
+  top: -8px;
+}
+
+.ticket-stub::after {
+  bottom: -8px;
+}
+
+.stub-city-badge {
+  font-size: 11px;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  color: var(--secondary-green);
+  display: flex;
+  align-items: center;
+  gap: 4px;
+}
+
+.stub-date-display {
+  margin: 12px 0;
+}
+
+.stub-day-number {
+  font-size: 38px;
+  font-weight: 800;
+  color: var(--dark-green);
+  line-height: 1;
+  letter-spacing: -1px;
+}
+
+.stub-month-year {
+  font-size: 12px;
+  font-weight: 700;
+  text-transform: uppercase;
+  color: var(--text-muted);
+  letter-spacing: 0.5px;
+  margin-top: 4px;
+}
+
+.stub-weekday {
+  font-size: 11.5px;
+  font-weight: 600;
+  color: var(--text-muted);
+}
+
+.stub-ref-tag {
+  font-family: 'SF Mono', Monaco, Consolas, monospace;
+  font-size: 11px;
+  font-weight: 700;
+  color: var(--text-muted);
+  background: #eef2f6;
+  padding: 3px 6px;
+  border-radius: 4px;
+  letter-spacing: 0.3px;
+}
+
+/* Right Main Ticket Body */
+.ticket-body {
+  flex: 1;
+  padding: 24px 28px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  gap: 16px;
+  min-width: 0;
+}
+
+/* Header inside ticket body: IDs and status pills */
+.ticket-header-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 12px;
+}
+
+.ticket-id-group {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.ticket-id-pill {
+  font-family: 'SF Mono', Monaco, Consolas, monospace;
+  font-size: 12px;
+  font-weight: 700;
+  color: var(--secondary-green);
+  background: var(--light-mint);
+  padding: 3px 8px;
+  border-radius: 6px;
+  border: 1px solid rgba(7, 57, 49, 0.12);
+  cursor: pointer;
+  transition: all 0.2s;
+}
+
+.ticket-id-pill:hover {
+  background: #d1fae5;
+}
+
+.ticket-status-badges {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  flex-wrap: wrap;
+}
+
+/* Strict separation of badges */
+.status-pill {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  font-size: 11.5px;
+  font-weight: 700;
+  padding: 4px 10px;
+  border-radius: 20px;
+  letter-spacing: 0.3px;
+  white-space: nowrap;
+}
+
+.status-dot {
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  flex-shrink: 0;
+}
+
+/* Booking Statuses */
+.badge-booking-confirmed {
+  background: #dcfce7;
+  color: #15803d;
+  border: 1px solid #bbf7d0;
+}
+.badge-booking-confirmed .status-dot {
+  background: #16a34a;
+}
+
+.badge-booking-pending {
+  background: #fef3c7;
+  color: #b45309;
+  border: 1px solid #fde68a;
+}
+.badge-booking-pending .status-dot {
+  background: #d97706;
+}
+
+.badge-booking-cancelled {
+  background: #fee2e2;
+  color: #b91c1c;
+  border: 1px solid #fecaca;
+}
+.badge-booking-cancelled .status-dot {
+  background: #dc2626;
+}
+
+/* Payment Statuses */
+.badge-payment-paid {
+  background: #ecfdf5;
+  color: #047857;
+  border: 1px solid #a7f3d0;
+}
+.badge-payment-paid .status-dot {
+  background: #10b981;
+}
+
+.badge-payment-pending {
+  background: #fffbeb;
+  color: #92400e;
+  border: 1px solid #fde68a;
+}
+.badge-payment-pending .status-dot {
+  background: #f59e0b;
+}
+
+.badge-payment-failed {
+  background: #fef2f2;
+  color: #991b1b;
+  border: 1px solid #fecaca;
+}
+.badge-payment-failed .status-dot {
+  background: #ef4444;
+}
+
+.badge-payment-refunded {
+  background: #f0f9ff;
+  color: #0369a1;
+  border: 1px solid #bae6fd;
+}
+.badge-payment-refunded .status-dot {
+  background: #0284c7;
+}
+
+/* Title & Destinations Sequence */
+.ticket-title-area {
+  margin: 4px 0;
+}
+
+.ticket-main-title {
+  font-family: 'Playfair Display', Georgia, serif;
+  font-size: 21px;
+  font-weight: 800;
+  color: var(--dark-green);
+  line-height: 1.25;
+  margin-bottom: 6px;
+}
+
+.ticket-stops-sequence {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  flex-wrap: wrap;
+  font-size: 12.5px;
+}
+
+.ticket-stop-tag {
+  background: #f8faf9;
+  border: 1px solid #e2e8f0;
+  padding: 3px 9px;
+  border-radius: 4px;
+  font-weight: 600;
+  color: var(--text-medium);
+}
+
+.ticket-arrow {
+  color: var(--orange);
+  font-weight: 700;
+  font-size: 11px;
+}
+
+/* Metadata Bar */
+.ticket-meta-row {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  font-size: 12.5px;
+  color: var(--text-muted);
+  flex-wrap: wrap;
+  padding: 8px 0;
+  border-top: 1px dashed #f1f5f9;
+}
+
+.ticket-meta-item {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+}
+
+.ticket-meta-item strong {
+  color: var(--text-dark);
+}
+
+/* Footer / Action row */
+.ticket-footer-row {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 14px;
+  padding-top: 12px;
+  border-top: 1px solid #f1f5f9;
+}
+
+.ticket-fare-wrap {
+  display: flex;
+  align-items: baseline;
+  gap: 8px;
+}
+
+.ticket-fare-amount {
+  font-size: 20px;
+  font-weight: 800;
+  color: var(--dark-green);
+}
+
+.ticket-fare-caption {
+  font-size: 12px;
+  color: var(--text-muted);
+}
+
+.ticket-action-btns {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  flex-wrap: wrap;
+}
+
+.btn-ticket-view {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  padding: 8px 16px;
+  border-radius: var(--radius-sm);
+  font-size: 13px;
+  font-weight: 600;
+  border: 1px solid var(--dark-green);
+  background: var(--dark-green);
+  color: #ffffff;
+  cursor: pointer;
+  transition: all 0.2s;
+  text-decoration: none;
+}
+
+.btn-ticket-view:hover {
+  background: var(--secondary-green);
+  border-color: var(--secondary-green);
+  transform: translateY(-1px);
+}
+
+.btn-ticket-pass {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  padding: 8px 14px;
+  border-radius: var(--radius-sm);
+  font-size: 12.5px;
+  font-weight: 600;
+  border: 1px solid #a7f3d0;
+  background: #ecfdf5;
+  color: var(--dark-green);
+  cursor: pointer;
+  transition: all 0.2s;
+}
+
+.btn-ticket-pass:hover {
+  background: #dcfce7;
+}
+
+/* --------------------------------------------------------------------------
+   6. EMPTY TIMELINE STATE
+   -------------------------------------------------------------------------- */
+.ledger-empty-state {
+  text-align: center;
+  padding: 60px 24px;
+  background: #ffffff;
+  border-radius: var(--radius-lg);
+  border: 2px dashed #cbd5e1;
+  margin-top: 20px;
+}
+
+.empty-ledger-icon {
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  background: var(--light-mint);
+  color: var(--dark-green);
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 16px;
+}
+
+.empty-ledger-title {
+  font-family: 'Playfair Display', Georgia, serif;
+  font-size: 22px;
+  font-weight: 700;
+  color: var(--dark-green);
+  margin-bottom: 8px;
+}
+
+.empty-ledger-desc {
+  font-size: 14px;
+  color: var(--text-muted);
+  max-width: 440px;
+  margin: 0 auto 20px;
+  line-height: 1.5;
+}
+
+/* --------------------------------------------------------------------------
+   7. DIGITAL TICKET DETAILS & CHECKOUT MODALS
+   -------------------------------------------------------------------------- */
+.dashboard-modal-backdrop {
+  position: fixed;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.58);
+  backdrop-filter: blur(5px);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 2500;
+  opacity: 0;
+  visibility: hidden;
+  transition: opacity 0.25s ease, visibility 0.25s ease;
+  padding: 16px;
+}
+
+.dashboard-modal-backdrop.open {
+  opacity: 1;
+  visibility: visible;
+}
+
+.dashboard-modal-dialog {
+  background: #ffffff;
+  border-radius: var(--radius-xl);
+  width: 100%;
+  max-width: 680px;
+  max-height: 92vh;
+  display: flex;
+  flex-direction: column;
+  box-shadow: 0 24px 60px rgba(0, 0, 0, 0.25);
+  transform: translateY(16px) scale(0.98);
+  transition: transform 0.25s cubic-bezier(0.16, 1, 0.3, 1);
+  overflow: hidden;
+}
+
+.dashboard-modal-backdrop.open .dashboard-modal-dialog {
+  transform: translateY(0) scale(1);
+}
+
+.dashboard-modal-header {
+  padding: 20px 24px;
+  border-bottom: 1px solid var(--border-light);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background: #ffffff;
+}
+
+.modal-header-left {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.modal-header-title {
+  font-family: 'Playfair Display', Georgia, serif;
+  font-size: 20px;
+  font-weight: 800;
+  color: var(--dark-green);
+  margin: 0;
+}
+
+.modal-close-icon-btn {
+  background: none;
+  border: none;
+  width: 32px;
+  height: 32px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--text-muted);
+  cursor: pointer;
+  transition: all 0.2s;
+}
+
+.modal-close-icon-btn:hover {
+  background: #f1f5f9;
+  color: var(--text-dark);
+}
+
+.dashboard-modal-body {
+  padding: 24px;
+  overflow-y: auto;
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.dashboard-modal-footer {
+  padding: 16px 24px;
+  border-top: 1px solid var(--border-light);
+  background: #f8faf9;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 12px;
+}
+
+/* Digital Ticket Interior Styling */
+.modal-status-banner {
+  border-radius: 10px;
+  padding: 14px 18px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 12px;
+}
+
+.modal-status-banner.confirmed {
+  background: #ecfdf5;
+  border: 1px solid #bbf7d0;
+}
+
+.modal-status-banner.pending {
+  background: #fffbeb;
+  border: 1px solid #fde68a;
+}
+
+.modal-status-banner.cancelled {
+  background: #fef2f2;
+  border: 1px solid #fecaca;
+}
+
+.status-banner-text {
+  font-size: 13px;
+  color: var(--text-medium);
+}
+
+.detail-section-block {
+  border: 1px solid var(--border-light);
+  border-radius: var(--radius-sm);
+  padding: 16px;
+  background: #ffffff;
+}
+
+.detail-section-title {
+  font-size: 12px;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.6px;
+  color: var(--text-muted);
+  margin-bottom: 12px;
+  display: flex;
+  align-items: center;
+  gap: 6px;
+}
+
+.detail-kv-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 12px;
+  font-size: 13px;
+}
+
+.detail-kv-item {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+}
+
+.detail-kv-label {
+  font-size: 11.5px;
+  color: var(--text-muted);
+}
+
+.detail-kv-value {
+  font-weight: 600;
+  color: var(--text-dark);
+}
+
+.breakdown-table {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 13px;
+  margin-top: 8px;
+}
+
+.breakdown-table th {
+  background: #f8faf9;
+  padding: 8px 10px;
+  font-size: 11px;
+  text-transform: uppercase;
+  color: var(--text-muted);
+  text-align: left;
+  border-bottom: 1px solid var(--border-light);
+}
+
+.breakdown-table td {
+  padding: 10px;
+  border-bottom: 1px solid #f1f5f9;
+  vertical-align: middle;
+}
+
+.breakdown-total-row td {
+  font-weight: 800;
+  font-size: 14px;
+  background: #f8faf9;
+  border-top: 1px solid var(--border-light);
+  color: var(--dark-green);
+}
+
+.seller-info-callout {
+  background: #f8faf9;
+  border-left: 3px solid var(--dark-green);
+  padding: 12px 14px;
+  border-radius: 0 6px 6px 0;
+  font-size: 12.5px;
+  color: var(--text-medium);
+  line-height: 1.5;
+}
+
+.cancellation-callout {
+  background: #fef2f2;
+  border-left: 3px solid #dc2626;
+  padding: 12px 14px;
+  border-radius: 0 6px 6px 0;
+  font-size: 12.5px;
+  color: #991b1b;
+  line-height: 1.5;
+}
+
+/* --------------------------------------------------------------------------
+   8. RAZORPAY SANDBOX SIMULATION
+   -------------------------------------------------------------------------- */
+.payment-demo-card {
+  border: 1px solid #bae6fd;
+  background: #f0f9ff;
+  border-radius: var(--radius-sm);
+  padding: 16px;
+  margin-bottom: 14px;
+}
+
+.payment-demo-header {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  font-size: 13px;
+  font-weight: 700;
+  color: #0369a1;
+  margin-bottom: 8px;
+}
+
+.payment-demo-desc {
+  font-size: 12.5px;
+  color: #0c4a6e;
+  line-height: 1.45;
+}
+
+.gateway-sim-buttons {
+  display: flex;
+  gap: 10px;
+  margin-top: 16px;
+  flex-wrap: wrap;
+}
+
+.btn-sim-success {
+  flex: 1;
+  background: #16a34a;
+  color: #ffffff;
+  border: none;
+  padding: 12px 16px;
+  border-radius: 6px;
+  font-weight: 700;
+  cursor: pointer;
+  font-size: 13.5px;
+  transition: background 0.2s;
+}
+
+.btn-sim-success:hover {
+  background: #15803d;
+}
+
+.btn-sim-fail {
+  flex: 1;
+  background: #dc2626;
+  color: #ffffff;
+  border: none;
+  padding: 12px 16px;
+  border-radius: 6px;
+  font-weight: 700;
+  cursor: pointer;
+  font-size: 13.5px;
+  transition: background 0.2s;
+}
+
+.btn-sim-fail:hover {
+  background: #b91c1c;
+}
+
+/* --------------------------------------------------------------------------
+   9. E-TICKET OFFICIAL PRINT PASS
+   -------------------------------------------------------------------------- */
+.e-ticket-container {
+  border: 2px dashed #073931;
+  border-radius: 12px;
+  padding: 24px;
+  background: #ffffff;
+  position: relative;
+}
+
+.ticket-watermark {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%) rotate(-25deg);
+  font-size: 44px;
+  font-weight: 900;
+  color: rgba(7, 57, 49, 0.04);
+  pointer-events: none;
+  white-space: nowrap;
+}
+
+.ticket-top-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-bottom: 2px solid var(--light-mint);
+  padding-bottom: 16px;
+  margin-bottom: 16px;
+}
+
+.ticket-barcode-wrap {
+  text-align: center;
+  padding-top: 16px;
+  border-top: 1px dashed var(--border-light);
+  margin-top: 16px;
+}
+
+/* --------------------------------------------------------------------------
+   10. RESPONSIVE DESIGN
+   -------------------------------------------------------------------------- */
+@media (max-width: 1024px) {
+  .ticket-stub {
+    width: 140px;
+    padding: 20px 14px;
+  }
+
+  .ticket-body {
+    padding: 20px 22px;
+  }
+}
+
+@media (max-width: 768px) {
+  .ledger-intro-panel {
+    padding: 28px 24px;
+  }
+
+  .ledger-title {
+    font-size: 30px;
+  }
+
+  .ledger-controls-bar {
+    flex-direction: column;
+    align-items: stretch;
+  }
+
+  .ledger-search-sort {
+    flex-direction: column;
+    align-items: stretch;
+  }
+
+  .ledger-search-box {
+    width: 100%;
+  }
+
+  /* Timeline on Mobile */
+  .ledger-timeline-container {
+    padding-left: 24px;
+  }
+
+  .ledger-timeline-container::before {
+    left: 8px;
+  }
+
+  .ledger-timeline-node {
+    left: -24px;
+    width: 22px;
+    height: 22px;
+    top: 20px;
+  }
+
+  .node-dot {
+    width: 10px;
+    height: 10px;
+  }
+
+  /* Stack Ticket Card on Mobile */
+  .ledger-ticket-card {
+    flex-direction: column;
+  }
+
+  .ticket-stub {
+    width: 100%;
+    border-right: none;
+    border-bottom: 1px dashed #cbd5e1;
+    padding: 16px 20px;
+    flex-direction: row;
+    justify-content: space-between;
+  }
+
+  .stub-date-display {
+    margin: 0;
+    display: flex;
+    align-items: baseline;
+    gap: 8px;
+  }
+
+  .stub-day-number {
+    font-size: 28px;
+  }
+
+  .ticket-stub::before,
+  .ticket-stub::after {
+    display: none;
+  }
+
+  .ticket-body {
+    padding: 18px 20px;
+  }
+
+  .ticket-main-title {
+    font-size: 18px;
+  }
+
+  .ticket-footer-row {
+    flex-direction: column;
+    align-items: stretch;
+    gap: 12px;
+  }
+
+  .btn-ticket-view,
+  .btn-ticket-pass {
+    width: 100%;
+    justify-content: center;
+  }
+}
+
+@media (max-width: 640px) {
+  .ledger-container {
+    padding: 0 16px;
+  }
+}

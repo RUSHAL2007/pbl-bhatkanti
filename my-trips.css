@@ -1,0 +1,375 @@
+/* ==========================================================================
+   BHATKANTI - MY TRIPS STYLESHEET
+   Standardized layout and proportions matching Bhatkanti Design System:
+   - 1280px max-width container with 24px desktop / 16px mobile padding
+   - Consistent hero proportions matching Explore and Plan My Trip
+   - Consistent typography, card styling, and button dimensions
+   ========================================================================== */
+
+/* --------------------------------------------------------------------------
+   1. HERO SECTION (Standardized with Explore & Plan Proportions)
+   -------------------------------------------------------------------------- */
+.my-trips-hero-wrapper {
+  max-width: 1280px;
+  margin: 20px auto 36px;
+  padding: 0 24px;
+}
+
+.my-trips-hero-banner {
+  position: relative;
+  width: 100%;
+  min-height: 380px;
+  border-radius: var(--radius-xl);
+  overflow: hidden;
+  box-shadow: var(--shadow-md);
+  background-color: var(--dark-green);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.my-trips-hero-bg {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center 42%;
+  filter: brightness(0.8);
+  transform: scale(1.02);
+  transition: transform 6s ease;
+}
+
+.my-trips-hero-banner:hover .my-trips-hero-bg {
+  transform: scale(1.05);
+}
+
+.my-trips-hero-overlay {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(
+    180deg,
+    rgba(7, 57, 49, 0.76) 0%,
+    rgba(7, 57, 49, 0.58) 45%,
+    rgba(3, 24, 21, 0.90) 100%
+  );
+  pointer-events: none;
+}
+
+.my-trips-hero-content {
+  position: relative;
+  z-index: 10;
+  text-align: center;
+  padding: 44px 24px;
+  max-width: 860px;
+  margin: 0 auto;
+}
+
+.my-trips-hero-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  background: rgba(255, 255, 255, 0.16);
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  backdrop-filter: blur(8px);
+  color: #ffdebe;
+  font-size: 11px;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 1.5px;
+  padding: 6px 16px;
+  border-radius: 30px;
+  margin-bottom: 14px;
+}
+
+.my-trips-hero-title {
+  font-family: 'Playfair Display', Georgia, serif;
+  font-size: 46px;
+  font-weight: 800;
+  line-height: 1.15;
+  color: #ffffff;
+  margin-bottom: 12px;
+  letter-spacing: -0.5px;
+  text-shadow: 0 2px 14px rgba(0, 0, 0, 0.3);
+}
+
+.my-trips-hero-subtitle {
+  font-size: 16px;
+  font-weight: 400;
+  color: rgba(255, 255, 255, 0.95);
+  line-height: 1.55;
+  max-width: 660px;
+  margin: 0 auto;
+}
+
+/* --------------------------------------------------------------------------
+   2. SAVED TRIPS CONTENT SECTION
+   -------------------------------------------------------------------------- */
+.my-trips-section {
+  max-width: 1280px;
+  margin: 0 auto 72px;
+  padding: 0 24px;
+}
+
+/* Filter Tabs */
+.trips-filter-tabs {
+  display: flex;
+  gap: 10px;
+  margin-bottom: 24px;
+  border-bottom: 1px solid var(--border-light);
+  padding-bottom: 14px;
+  overflow-x: auto;
+}
+
+.trip-tab-btn {
+  background: #ffffff;
+  border: 1px solid var(--border-light);
+  padding: 8px 18px;
+  border-radius: 30px;
+  font-size: 13px;
+  font-weight: 600;
+  color: var(--text-medium);
+  cursor: pointer;
+  transition: all 0.2s ease;
+  white-space: nowrap;
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+}
+
+.trip-tab-btn:hover {
+  background: #f8faf9;
+  color: var(--dark-green);
+  border-color: #cbd5e1;
+}
+
+.trip-tab-btn.active {
+  background: var(--dark-green);
+  color: #ffffff;
+  border-color: var(--dark-green);
+}
+
+/* Saved Trips List */
+.saved-trips-list {
+  display: flex;
+  flex-direction: column;
+  gap: 18px;
+}
+
+/* Card Styling */
+.saved-trip-item-card {
+  background: #ffffff;
+  border: 1px solid var(--border-light);
+  border-radius: var(--radius-lg);
+  padding: 24px;
+  box-shadow: var(--shadow-sm);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 20px;
+  transition: all 0.2s ease;
+}
+
+.saved-trip-item-card:hover {
+  box-shadow: var(--shadow-md);
+  border-color: #cbd5e1;
+}
+
+.trip-main-info {
+  flex: 1;
+  min-width: 280px;
+}
+
+.trip-ref-badge {
+  display: inline-block;
+  font-size: 11.5px;
+  font-weight: 700;
+  font-family: 'SF Mono', Monaco, Consolas, monospace;
+  color: var(--secondary-green);
+  background: var(--light-mint);
+  padding: 3px 8px;
+  border-radius: 6px;
+  border: 1px solid rgba(7, 57, 49, 0.12);
+  margin-bottom: 8px;
+}
+
+.trip-item-title {
+  font-size: 18px;
+  font-weight: 700;
+  color: var(--text-dark);
+  margin-bottom: 6px;
+}
+
+.trip-item-meta {
+  font-size: 12.5px;
+  color: var(--text-muted);
+  display: flex;
+  gap: 16px;
+  margin-bottom: 12px;
+  flex-wrap: wrap;
+}
+
+.trip-item-meta strong {
+  color: var(--text-dark);
+  font-weight: 600;
+}
+
+/* Status Badges */
+.status-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 5px;
+  font-size: 11.5px;
+  font-weight: 700;
+  padding: 4px 10px;
+  border-radius: 20px;
+  letter-spacing: 0.3px;
+  text-transform: uppercase;
+}
+
+.status-badge.planned {
+  background: #dcfce7;
+  color: #15803d;
+  border: 1px solid #bbf7d0;
+}
+
+.status-badge.pending {
+  background: #fef3c7;
+  color: #b45309;
+  border: 1px solid #fde68a;
+}
+
+.status-badge.confirmed {
+  background: #ecfdf5;
+  color: #047857;
+  border: 1px solid #a7f3d0;
+}
+
+.status-badge.cancelled {
+  background: #fee2e2;
+  color: #b91c1c;
+  border: 1px solid #fecaca;
+}
+
+/* Action Buttons */
+.trip-actions-col {
+  display: flex;
+  gap: 10px;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+.btn-manage-booking {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  padding: 8px 14px;
+  text-decoration: none;
+  border-radius: var(--radius-sm);
+  font-size: 12.5px;
+  font-weight: 600;
+  color: var(--dark-green);
+  border: 1px solid #a7f3d0;
+  background: #ecfdf5;
+  transition: all 0.2s ease;
+}
+
+.btn-manage-booking:hover {
+  background: #dcfce7;
+  border-color: #86efac;
+  transform: translateY(-1px);
+}
+
+.btn-view-planner {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  padding: 8px 14px;
+  text-decoration: none;
+  border-radius: var(--radius-sm);
+  font-size: 12.5px;
+  font-weight: 600;
+  color: var(--text-dark);
+  border: 1px solid var(--border-light);
+  background: #ffffff;
+  transition: all 0.2s ease;
+}
+
+.btn-view-planner:hover {
+  background: #f8faf9;
+  border-color: #cbd5e1;
+  color: var(--dark-green);
+}
+
+.btn-delete-trip {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 8px 10px;
+  border-radius: var(--radius-sm);
+  color: #b91c1c;
+  border: 1px solid #fecaca;
+  background: #ffffff;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.btn-delete-trip:hover {
+  background: #fee2e2;
+}
+
+/* --------------------------------------------------------------------------
+   3. RESPONSIVE BREAKPOINTS (Standardized with Website Layout)
+   -------------------------------------------------------------------------- */
+@media (max-width: 1024px) {
+  .my-trips-hero-banner {
+    min-height: 340px;
+  }
+
+  .saved-trip-item-card {
+    padding: 20px;
+  }
+}
+
+@media (max-width: 768px) {
+  .my-trips-hero-banner {
+    min-height: 300px;
+  }
+
+  .my-trips-hero-title {
+    font-size: 32px;
+  }
+
+  .my-trips-hero-subtitle {
+    font-size: 14.5px;
+  }
+
+  .saved-trip-item-card {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 16px;
+    padding: 18px;
+  }
+
+  .trip-main-info {
+    width: 100%;
+    min-width: 0;
+  }
+
+  .trip-actions-col {
+    width: 100%;
+    justify-content: flex-start;
+    padding-top: 12px;
+    border-top: 1px solid var(--border-light);
+  }
+}
+
+@media (max-width: 640px) {
+  .my-trips-hero-wrapper,
+  .my-trips-section {
+    padding: 0 16px;
+  }
+}
+

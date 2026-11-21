@@ -1,0 +1,441 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description"
+    content="Your Travel Ledger – Keep your bookings, tickets and reservations organised in one place with Bhatkanti.">
+  <title>Your Travel Ledger – BHATKANTI</title>
+
+  <!-- Base Core Styles -->
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/account.css">
+  <!-- Bhatkanti Travel Ledger Stylesheet -->
+  <link rel="stylesheet" href="css/bookings.css">
+</head>
+
+<body>
+
+  <!-- ==========================================================================
+       1. HEADER / NAVIGATION BAR (Exact Shared Component)
+       ========================================================================== -->
+  <header class="header">
+    <div class="header-container">
+      <!-- Logo -->
+      <a href="index.html" class="logo-brand" aria-label="Bhatkanti Homepage">
+        <img src="images/bhatkanti-logo.png" alt="Bhatkanti Logo">
+      </a>
+
+      <!-- Navigation Links -->
+      <nav class="main-nav" aria-label="Main Navigation">
+        <ul>
+          <li><a href="index.html" id="nav-home">Home</a></li>
+          <li><a href="explore.html" id="nav-explore">Explore</a></li>
+          <li><a href="plan.html" id="nav-plan">Plan My Trip</a></li>
+          <li><a href="bookings.html" class="active" id="nav-bookings">Bookings</a></li>
+          <li><a href="my-trips.html" id="nav-my-trips">My Trips</a></li>
+        </ul>
+      </nav>
+
+      <!-- Right Header Elements -->
+      <div class="header-right">
+        <!-- User Profile -->
+        <div class="user-profile" id="user-profile-menu">
+          <div class="avatar-circle">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+              stroke-linecap="round" stroke-linejoin="round">
+              <path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"></path>
+              <circle cx="12" cy="7" r="4"></circle>
+            </svg>
+          </div>
+          <div class="user-info">
+            <span class="user-greeting">Hello,</span>
+            <span class="user-name">Explorer</span>
+          </div>
+          <svg width="10" height="6" viewBox="0 0 10 6" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M1 1L5 5L9 1" stroke="#6B7280" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
+          </svg>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <!-- ==========================================================================
+       2. TRAVEL LEDGER MAIN CONTENT
+       ========================================================================== -->
+  <main class="ledger-main">
+    <div class="ledger-container">
+
+      <!-- 2A. Distinctive Deep Forest-Green Introductory Panel with Integrated Metrics -->
+      <section class="ledger-intro-panel" aria-label="Travel Ledger Overview">
+        <!-- Subtle SVG watermark motif (zero photographs) -->
+        <svg class="ledger-intro-watermark" width="220" height="220" viewBox="0 0 24 24" fill="none"
+          stroke="currentColor" stroke-width="0.8" stroke-linecap="round" stroke-linejoin="round">
+          <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path>
+          <polyline points="14 2 14 8 20 8"></polyline>
+          <line x1="16" y1="13" x2="8" y2="13"></line>
+          <line x1="16" y1="17" x2="8" y2="17"></line>
+          <polyline points="10 9 9 9 8 9"></polyline>
+        </svg>
+
+        <div class="ledger-intro-top">
+          <div class="ledger-intro-copy">
+            <div class="ledger-tag-pill">
+              <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
+                <rect x="3" y="4" width="18" height="18" rx="2" ry="2"></rect>
+                <line x1="16" y1="2" x2="16" y2="6"></line>
+                <line x1="8" y1="2" x2="8" y2="6"></line>
+                <line x1="3" y1="10" x2="21" y2="10"></line>
+              </svg>
+              <span>TRAVEL JOURNAL &amp; RESERVATIONS</span>
+            </div>
+            <h1 class="ledger-title">Your Travel Ledger</h1>
+            <p class="ledger-subtitle">Every journey has a story. Keep your bookings, tickets and reservations
+              organised in one place.</p>
+          </div>
+
+          <div class="ledger-intro-actions">
+            <button class="btn-ledger-new" type="button" onclick="window.BhatkantiBookings.openNewBookingModal()">
+              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
+                <line x1="12" y1="5" x2="12" y2="19"></line>
+                <line x1="5" y1="12" x2="19" y2="12"></line>
+              </svg>
+              <span>Book a Trip</span>
+            </button>
+            <a href="plan.html" class="btn-ledger-plan">
+              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <polygon
+                  points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2">
+                </polygon>
+              </svg>
+              <span>Plan My Trip</span>
+            </a>
+          </div>
+        </div>
+      </section>
+
+      <!-- 2B. Compact Ledger Controls Bar (Pill Filters, Search, and Sort) -->
+      <section class="ledger-controls-bar" aria-label="Timeline Filters and Search">
+        <!-- Compact Filter Pills -->
+        <div class="ledger-filter-pills" role="tablist">
+          <button class="ledger-pill-btn active" type="button" role="tab" data-filter="all">
+            <span>All Bookings</span>
+            <span class="ledger-pill-count" id="tab-count-all">0</span>
+          </button>
+          <button class="ledger-pill-btn" type="button" role="tab" data-filter="CONFIRMED">
+            <span>Confirmed</span>
+            <span class="ledger-pill-count" id="tab-count-confirmed">0</span>
+          </button>
+          <button class="ledger-pill-btn" type="button" role="tab" data-filter="PENDING">
+            <span>Pending</span>
+            <span class="ledger-pill-count" id="tab-count-pending">0</span>
+          </button>
+          <button class="ledger-pill-btn" type="button" role="tab" data-filter="CANCELLED">
+            <span>Cancelled</span>
+            <span class="ledger-pill-count" id="tab-count-cancelled">0</span>
+          </button>
+        </div>
+
+        <!-- Search Box & Sort Selection -->
+        <div class="ledger-search-sort">
+          <div class="ledger-search-box">
+            <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <circle cx="11" cy="11" r="8"></circle>
+              <line x1="21" y1="21" x2="16.65" y2="16.65"></line>
+            </svg>
+            <input type="text" class="ledger-search-input" id="bookings-search-input"
+              placeholder="Search by booking ID, trip name or destination..." autocomplete="off">
+            <button class="ledger-search-clear" id="bookings-search-clear" type="button" title="Clear Search">✕</button>
+          </div>
+
+          <div class="ledger-sort-wrap">
+            <label for="bookings-sort-select" class="ledger-sort-label">Sort by:</label>
+            <select id="bookings-sort-select" class="ledger-sort-dropdown">
+              <option value="newest" selected>Newest First</option>
+              <option value="oldest">Oldest First</option>
+              <option value="travelDate">Travel Date</option>
+            </select>
+          </div>
+        </div>
+      </section>
+
+      <!-- 2C. Vertical Chronological Booking Timeline -->
+      <section aria-label="Chronological Booking Timeline">
+        <div class="ledger-timeline-container" id="ledger-timeline-container">
+          <!-- Rendered dynamically by JavaScript as individual ticket-inspired panels connected via vertical spine -->
+        </div>
+      </section>
+
+      <!-- 2D. Empty State Container (Elegant, zero photos) -->
+      <div class="ledger-empty-state" id="bookings-empty-state" style="display: none;">
+        <div class="empty-ledger-icon">
+          <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+            stroke-linecap="round" stroke-linejoin="round">
+            <rect x="3" y="4" width="18" height="18" rx="2" ry="2"></rect>
+            <line x1="16" y1="2" x2="16" y2="6"></line>
+            <line x1="8" y1="2" x2="8" y2="6"></line>
+            <line x1="3" y1="10" x2="21" y2="10"></line>
+          </svg>
+        </div>
+        <h3 class="empty-ledger-title">No Bookings Found in Ledger</h3>
+        <p class="empty-ledger-desc">We couldn't find any travel reservations matching your
+          search keywords or filter status.</p>
+        <button class="btn-ledger-new" type="button"
+          onclick="document.getElementById('bookings-search-input').value = ''; window.BhatkantiBookings.setFilter('all');">
+          Clear Filters &amp; View All
+        </button>
+      </div>
+
+    </div>
+  </main>
+
+  <!-- ==========================================================================
+       3. MODALS
+       ========================================================================== -->
+
+  <!-- 3A. Booking Details Modal (Digital Ticket View) -->
+  <div class="dashboard-modal-backdrop" id="details-modal-backdrop" role="dialog" aria-modal="true"
+    aria-labelledby="details-modal-title">
+    <div class="dashboard-modal-dialog">
+      <div class="dashboard-modal-header">
+        <div class="modal-header-left">
+          <h3 class="modal-header-title" id="details-modal-title">Booking Details</h3>
+        </div>
+        <button class="modal-close-icon-btn" type="button" aria-label="Close modal"
+          onclick="window.BhatkantiBookings.closeBookingDetails()">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <line x1="18" y1="6" x2="6" y2="18"></line>
+            <line x1="6" y1="6" x2="18" y2="18"></line>
+          </svg>
+        </button>
+      </div>
+
+      <div class="dashboard-modal-body" id="details-modal-content">
+        <!-- Injected dynamically -->
+      </div>
+
+      <div class="dashboard-modal-footer" id="details-modal-footer">
+        <!-- Injected dynamically -->
+      </div>
+    </div>
+  </div>
+
+  <!-- 3B. Official Confirmed E-Ticket Modal -->
+  <div class="dashboard-modal-backdrop" id="ticket-modal-backdrop" role="dialog" aria-modal="true">
+    <div class="dashboard-modal-dialog" style="max-width: 600px;">
+      <div class="dashboard-modal-header">
+        <div class="modal-header-left">
+          <h3 class="modal-header-title">Official E-Ticket Pass</h3>
+        </div>
+        <button class="modal-close-icon-btn" type="button" aria-label="Close modal"
+          onclick="window.BhatkantiBookings.closeTicketPassModal()">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <line x1="18" y1="6" x2="6" y2="18"></line>
+            <line x1="6" y1="6" x2="18" y2="18"></line>
+          </svg>
+        </button>
+      </div>
+
+      <div class="dashboard-modal-body" id="ticket-modal-content">
+        <!-- Injected dynamically -->
+      </div>
+
+      <div class="dashboard-modal-footer">
+        <button class="btn-ledger-plan" style="color: var(--text-dark); border-color: var(--border-light);"
+          type="button" onclick="window.BhatkantiBookings.closeTicketPassModal()">
+          Close
+        </button>
+        <button class="btn-ledger-new" type="button" onclick="window.print()">
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <polyline points="6 9 6 2 18 2 18 9"></polyline>
+            <path d="M6 18H4a2 2 0 0 1-2-2v-5a2 2 0 0 1 2-2h16a2 2 0 0 1 2 2v5a2 2 0 0 1-2 2h-2"></path>
+            <rect x="6" y="14" width="12" height="8"></rect>
+          </svg>
+          <span>Print / Save PDF</span>
+        </button>
+      </div>
+    </div>
+  </div>
+
+  <!-- 3C. Razorpay Sandbox Gateway Modal -->
+  <div class="dashboard-modal-backdrop" id="payment-modal-backdrop" role="dialog" aria-modal="true">
+    <div class="dashboard-modal-dialog" style="max-width: 520px;">
+      <div class="dashboard-modal-header">
+        <div class="modal-header-left">
+          <h3 class="modal-header-title">Razorpay Payment Sandbox</h3>
+        </div>
+        <button class="modal-close-icon-btn" type="button" aria-label="Close modal"
+          onclick="window.BhatkantiBookings.closePaymentSandbox()">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <line x1="18" y1="6" x2="6" y2="18"></line>
+            <line x1="6" y1="6" x2="18" y2="18"></line>
+          </svg>
+        </button>
+      </div>
+
+      <div class="dashboard-modal-body" id="payment-modal-content">
+        <!-- Injected dynamically -->
+      </div>
+
+      <div class="dashboard-modal-footer">
+        <button class="btn-ledger-plan" style="color: var(--text-dark); border-color: var(--border-light);"
+          type="button" onclick="window.BhatkantiBookings.closePaymentSandbox()">
+          Cancel Checkout
+        </button>
+      </div>
+    </div>
+  </div>
+
+  <!-- 3D. New Booking Modal (Connected with Curated Templates & Pricing) -->
+  <div class="dashboard-modal-backdrop" id="new-booking-modal-backdrop" role="dialog" aria-modal="true">
+    <div class="dashboard-modal-dialog" style="max-width: 620px;">
+      <div class="dashboard-modal-header">
+        <div class="modal-header-left">
+          <h3 class="modal-header-title">Book a Pune Trip / Attraction Pass</h3>
+        </div>
+        <button class="modal-close-icon-btn" type="button" aria-label="Close modal"
+          onclick="window.BhatkantiBookings.closeNewBookingModal()">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <line x1="18" y1="6" x2="6" y2="18"></line>
+            <line x1="6" y1="6" x2="18" y2="18"></line>
+          </svg>
+        </button>
+      </div>
+
+      <form id="new-booking-form">
+        <div class="dashboard-modal-body">
+          <div style="font-size: 13px; color: var(--text-muted); margin-bottom: 4px;">
+            Reserve verified tickets for handpicked Pune routes. Transparent pricing with instant booking records.
+          </div>
+
+          <div style="display: flex; flex-direction: column; gap: 14px;">
+            <div>
+              <label
+                style="display: block; font-size: 12.5px; font-weight: 700; color: var(--text-dark); margin-bottom: 4px;">
+                Select Trip Route *
+              </label>
+              <select id="nb-trip-select" class="ledger-search-input"
+                style="padding-left: 12px; cursor: pointer; border-radius: 8px;">
+                <option value="tpl-heritage">Pune Heritage Trail (Shaniwar Wada + Kelkar Museum + Dagdusheth)
+                </option>
+                <option value="tpl-sinhagad">Green Pune &amp; Sinhagad Valley (Sinhagad Fort + Khadakwasla)
+                </option>
+                <option value="tpl-palace">Aga Khan Palace &amp; Memorials (Aga Khan Palace + Pataleshwar)
+                </option>
+                <option value="tpl-cultural">Old Pune Cultural Walk (Heritage Wada + FC Road)</option>
+              </select>
+            </div>
+
+            <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 12px;">
+              <div>
+                <label
+                  style="display: block; font-size: 12.5px; font-weight: 700; color: var(--text-dark); margin-bottom: 4px;">
+                  Travel Date *
+                </label>
+                <input type="date" id="nb-travel-date" class="ledger-search-input"
+                  style="padding-left: 12px; border-radius: 8px;" required>
+              </div>
+              <div>
+                <label
+                  style="display: block; font-size: 12.5px; font-weight: 700; color: var(--text-dark); margin-bottom: 4px;">
+                  Number of Visitors *
+                </label>
+                <select id="nb-travelers-count" class="ledger-search-input"
+                  style="padding-left: 12px; cursor: pointer; border-radius: 8px;">
+                  <option value="1">1 Person</option>
+                  <option value="2" selected>2 Persons</option>
+                  <option value="3">3 Persons</option>
+                  <option value="4">4 Persons</option>
+                  <option value="5">5 Persons</option>
+                  <option value="6">6 Persons</option>
+                </select>
+              </div>
+            </div>
+
+            <div>
+              <label
+                style="display: block; font-size: 12.5px; font-weight: 700; color: var(--text-dark); margin-bottom: 4px;">
+                Lead Traveler Name *
+              </label>
+              <input type="text" id="nb-lead-name" class="ledger-search-input"
+                style="padding-left: 12px; border-radius: 8px;" placeholder="e.g. Aditya Kulkarni" required>
+            </div>
+
+            <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 12px;">
+              <div>
+                <label
+                  style="display: block; font-size: 12.5px; font-weight: 700; color: var(--text-dark); margin-bottom: 4px;">
+                  Email Address *
+                </label>
+                <input type="email" id="nb-lead-email" class="ledger-search-input"
+                  style="padding-left: 12px; border-radius: 8px;" placeholder="aditya@example.com" required>
+              </div>
+              <div>
+                <label
+                  style="display: block; font-size: 12.5px; font-weight: 700; color: var(--text-dark); margin-bottom: 4px;">
+                  Mobile Number *
+                </label>
+                <input type="tel" id="nb-lead-phone" class="ledger-search-input"
+                  style="padding-left: 12px; border-radius: 8px;" placeholder="+91 98220 12345" required>
+              </div>
+            </div>
+
+            <!-- Cost Breakdown Section -->
+            <div id="nb-cost-breakdown">
+              <!-- Dynamically updated -->
+            </div>
+          </div>
+        </div>
+
+        <div class="dashboard-modal-footer">
+          <button class="btn-ledger-plan" style="color: var(--text-dark); border-color: var(--border-light);"
+            type="button" onclick="window.BhatkantiBookings.closeNewBookingModal()">
+            Cancel
+          </button>
+          <button class="btn-ledger-new" type="submit">
+            Proceed to Payment Gateway &rarr;
+          </button>
+        </div>
+      </form>
+    </div>
+  </div>
+
+  <!-- ==========================================================================
+       4. FOOTER (Exact Shared Component)
+       ========================================================================== -->
+  <footer class="footer">
+    <div class="footer-container">
+      <div class="footer-top">
+        <div class="footer-brand">
+          <a href="index.html" aria-label="Bhatkanti Home"><img src="images/bhatkanti-logo.png"
+              alt="Bhatkanti Footer Logo"></a>
+        </div>
+        <nav class="footer-nav">
+          <ul>
+            <li><a href="#">About</a></li>
+            <li><span style="color: rgba(255,255,255,0.4);">|</span></li>
+            <li><a href="#">Contact</a></li>
+            <li><span style="color: rgba(255,255,255,0.4);">|</span></li>
+            <li><a href="#">Privacy Policy</a></li>
+            <li><span style="color: rgba(255,255,255,0.4);">|</span></li>
+            <li><a href="#">Help</a></li>
+          </ul>
+        </nav>
+        <div class="footer-right">
+          <img src="images/footer-skyline.svg" alt="Pune Skyline Art" class="footer-skyline-art">
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <span>&copy; 2026 Bhatkanti. All rights reserved.</span>
+        <span class="footer-quote">Places change. You should too.</span>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Bookings Engine Script -->
+  <script src="js/bookings.js"></script>
+  <script src="js/account.js"></script>
+</body>
+
+</html>

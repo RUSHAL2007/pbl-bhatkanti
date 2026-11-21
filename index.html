@@ -1,0 +1,696 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Bhatkanti - Discover Pune Differently. Explore historic streets, vibrant culture, forts, museums, temples and serene getaways in Pune.">
+  <title>BHATKANTI – Discover Pune Differently</title>
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/account.css">
+</head>
+<body>
+
+  <!-- ==========================================================================
+       1. HEADER / NAVIGATION BAR
+       ========================================================================== -->
+  <header class="header">
+    <div class="header-container">
+      <!-- Logo -->
+      <a href="index.html" class="logo-brand" aria-label="Bhatkanti Homepage">
+        <img src="images/bhatkanti-logo.png" alt="Bhatkanti Logo">
+      </a>
+
+      <!-- Navigation Links -->
+      <nav class="main-nav" aria-label="Main Navigation">
+        <ul>
+          <li><a href="index.html" class="active" id="nav-home">Home</a></li>
+          <li><a href="explore.html" id="nav-explore">Explore</a></li>
+          <li><a href="plan.html" id="nav-plan">Plan My Trip</a></li>
+          <li><a href="bookings.html" id="nav-bookings">Bookings</a></li>
+          <li><a href="my-trips.html" id="nav-my-trips">My Trips</a></li>
+        </ul>
+      </nav>
+
+      <!-- Right Header Elements -->
+      <div class="header-right">
+        <!-- Location Selector -->
+        <div class="location-pill" title="Current Location">
+          <svg width="14" height="16" viewBox="0 0 14 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M7 0C4.238 0 2 2.238 2 5C2 8.75 7 16 7 16C7 16 12 8.75 12 5C12 2.238 9.762 0 7 0ZM7 6.8 C6.006 6.8 5.2 5.994 5.2 5C5.2 4.006 6.006 3.2 7 3.2C7.994 3.2 8.8 4.006 8.8 5C8.8 5.994 7.994 6.8 7 6.8Z" fill="#073931"/>
+          </svg>
+          <span>Pune</span>
+          <svg width="10" height="6" viewBox="0 0 10 6" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M1 1L5 5L9 1" stroke="#374151" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+          </svg>
+        </div>
+
+        <!-- Search Icon -->
+        <button class="header-search-btn" aria-label="Search" id="btn-header-search">
+          <svg width="18" height="18" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M9 17C13.4183 17 17 13.4183 17 9C17 4.58172 13.4183 1 9 1C4.58172 1 1 4.58172 1 9C1 13.4183 4.58172 17 9 17Z" stroke="#374151" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+            <path d="M19 19L14.65 14.65" stroke="#374151" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+          </svg>
+        </button>
+
+        <div class="vertical-divider"></div>
+
+        <!-- User Profile -->
+        <div class="user-profile" id="user-profile-menu">
+          <div class="avatar-circle">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"></path>
+              <circle cx="12" cy="7" r="4"></circle>
+            </svg>
+          </div>
+          <div class="user-info">
+            <span class="user-greeting">Hello,</span>
+            <span class="user-name">Explorer</span>
+          </div>
+          <svg width="10" height="6" viewBox="0 0 10 6" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M1 1L5 5L9 1" stroke="#6B7280" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+          </svg>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <main>
+    <!-- ==========================================================================
+         2. HERO SECTION
+         ========================================================================== -->
+    <section class="hero-wrapper">
+      <div class="hero-banner">
+        <img src="images/hero-shaniwar-wada.jpg" alt="Shaniwar Wada Heritage Fort Gate" class="hero-banner-img">
+        <div class="hero-gradient-overlay"></div>
+
+        <!-- Left Heading -->
+        <div class="hero-header-left">
+          <h1 class="hero-title">Discover<br>Pune Differently</h1>
+          <p class="hero-subtitle">Historic streets, vibrant culture, serene getaways —<br>all in one place.</p>
+        </div>
+
+        <!-- Right Handwritten Text -->
+        <div class="hero-script-right">
+          <span class="script-text">Pune<br>Firat Nahi,<br>Jagtay!</span>
+          <svg class="script-underline-svg" width="130" height="16" viewBox="0 0 130 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M3 11C25 4 65 3 127 8C90 12 40 14 10 13" stroke="#f15a24" stroke-width="4" stroke-linecap="round"/>
+          </svg>
+        </div>
+
+        <!-- Floating Search Card -->
+        <div class="hero-search-card">
+          <div class="search-input-bar">
+            <svg class="search-icon" width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path d="M9 17C13.4183 17 17 13.4183 17 9C17 4.58172 13.4183 1 9 1C4.58172 1 1 4.58172 1 9C1 13.4183 4.58172 17 9 17Z" stroke="#6B7280" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+              <path d="M19 19L14.65 14.65" stroke="#6B7280" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+            </svg>
+            <input type="text" class="search-input-field" placeholder="Search for places, museums, forts, gardens..." aria-label="Search input">
+
+            <div class="search-location-select">
+              <svg width="14" height="16" viewBox="0 0 14 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M7 0C4.238 0 2 2.238 2 5C2 8.75 7 16 7 16C7 16 12 8.75 12 5C12 2.238 9.762 0 7 0ZM7 6.8 C6.006 6.8 5.2 5.994 5.2 5C5.2 4.006 6.006 3.2 7 3.2C7.994 3.2 8.8 4.006 8.8 5C8.8 5.994 7.994 6.8 7 6.8Z" fill="#073931"/>
+              </svg>
+              <span>Pune</span>
+              <svg width="10" height="6" viewBox="0 0 10 6" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M1 1L5 5L9 1" stroke="#374151" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+              </svg>
+            </div>
+
+            <button class="search-submit-btn" type="button" id="btn-hero-search">Search</button>
+          </div>
+
+          <!-- Category Chips -->
+          <div class="category-chips-row">
+            <a href="#" class="chip">Shaniwar Wada</a>
+            <a href="#" class="chip">Museums</a>
+            <a href="#" class="chip">Gardens</a>
+            <a href="#" class="chip">Temples</a>
+            <a href="#" class="chip">One Day Trip</a>
+          </div>
+        </div>
+
+        <!-- Hero Bottom Right Badge -->
+        <div class="hero-bottom-badge">
+          <svg width="12" height="14" viewBox="0 0 14 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M7 0C4.238 0 2 2.238 2 5C2 8.75 7 16 7 16C7 16 12 8.75 12 5C12 2.238 9.762 0 7 0Z" fill="#ffffff"/>
+          </svg>
+          <span>Shaniwar Wada Pune</span>
+          <span class="badge-arrow">→</span>
+        </div>
+
+        <!-- Slider Dots -->
+        <div class="hero-slider-dots">
+          <span class="dot active"></span>
+          <span class="dot"></span>
+          <span class="dot"></span>
+        </div>
+      </div>
+    </section>
+
+    <!-- ==========================================================================
+         3. EXPLORE BY CATEGORY
+         ========================================================================== -->
+    <section class="category-section">
+      <div class="section-header">
+        <h2 class="section-title">Explore by Category</h2>
+        <a href="#" class="see-all-link">See All →</a>
+      </div>
+
+      <div class="categories-grid">
+        <!-- 1. Forts -->
+        <a href="#" class="category-card bg-mint">
+          <div class="category-icon-wrapper">
+            <svg width="34" height="34" viewBox="0 0 24 24" fill="none" stroke="#073931" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M3 21h18"/>
+              <path d="M4 21V10l3-2 3 2v11"/>
+              <path d="M14 21V10l3-2 3 2v11"/>
+              <path d="M9 21v-5a2 2 0 0 1 4 0v5"/>
+              <path d="M7 10h10"/>
+              <path d="M9 6V3h6v3"/>
+            </svg>
+          </div>
+          <span class="category-name">Forts</span>
+        </a>
+
+        <!-- 2. Museums -->
+        <a href="#" class="category-card bg-tan">
+          <div class="category-icon-wrapper">
+            <svg width="34" height="34" viewBox="0 0 24 24" fill="none" stroke="#8b4513" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M4 22h16"/>
+              <path d="M2 10h20"/>
+              <path d="M12 2L2 7h20L12 2z"/>
+              <path d="M4 10v9"/>
+              <path d="M8 10v9"/>
+              <path d="M12 10v9"/>
+              <path d="M16 10v9"/>
+              <path d="M20 10v9"/>
+            </svg>
+          </div>
+          <span class="category-name">Museums</span>
+        </a>
+
+        <!-- 3. Gardens -->
+        <a href="#" class="category-card bg-mint">
+          <div class="category-icon-wrapper">
+            <svg width="34" height="34" viewBox="0 0 24 24" fill="none" stroke="#073931" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M12 19v3"/>
+              <path d="M12 19a7 7 0 1 0 0-14 7 7 0 0 0 0 14z"/>
+              <path d="M12 12a3 3 0 1 0 0-6 3 3 0 0 0 0 6z"/>
+            </svg>
+          </div>
+          <span class="category-name">Gardens</span>
+        </a>
+
+        <!-- 4. Historical Places -->
+        <a href="#" class="category-card bg-tan">
+          <div class="category-icon-wrapper">
+            <svg width="34" height="34" viewBox="0 0 24 24" fill="none" stroke="#2c5e53" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M3 21h18"/>
+              <path d="M5 21V7l7-4 7 4v14"/>
+              <path d="M9 11h6"/>
+              <path d="M9 15h6"/>
+              <path d="M10 21v-3a2 2 0 0 1 4 0v3"/>
+            </svg>
+          </div>
+          <span class="category-name">Historical Places</span>
+        </a>
+
+        <!-- 5. Temples -->
+        <a href="#" class="category-card bg-tan">
+          <div class="category-icon-wrapper">
+            <svg width="34" height="34" viewBox="0 0 24 24" fill="none" stroke="#a0522d" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M12 2l-6 6h12l-6-6z"/>
+              <path d="M4 10h16v12H4z"/>
+              <path d="M9 22v-6a3 3 0 0 1 6 0v6"/>
+              <path d="M12 2v6"/>
+            </svg>
+          </div>
+          <span class="category-name">Temples</span>
+        </a>
+
+        <!-- 6. Art & Culture -->
+        <a href="#" class="category-card bg-mint">
+          <div class="category-icon-wrapper">
+            <svg width="34" height="34" viewBox="0 0 24 24" fill="none" stroke="#073931" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M2 12a5 5 0 0 0 5 5 8 8 0 0 0 5-2 8 8 0 0 0 5 2 5 5 0 0 0 5-5V7H2v5z"/>
+              <circle cx="8" cy="11" r="1"/>
+              <circle cx="16" cy="11" r="1"/>
+              <path d="M9 14s1 1 3 1 3-1 3-1"/>
+            </svg>
+          </div>
+          <span class="category-name">Art &amp; Culture</span>
+        </a>
+
+        <!-- 7. Lakes & Dams -->
+        <a href="#" class="category-card bg-mint">
+          <div class="category-icon-wrapper">
+            <svg width="34" height="34" viewBox="0 0 24 24" fill="none" stroke="#0e5347" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M2 20c2 0 3-1 5-1s3 1 5 1 3-1 5-1 3 1 5 1"/>
+              <path d="M2 16c2 0 3-1 5-1s3 1 5 1 3-1 5-1 3 1 5 1"/>
+              <path d="M4 12l5-7 4 4 4-6 5 9H4z"/>
+            </svg>
+          </div>
+          <span class="category-name">Lakes &amp; Dams</span>
+        </a>
+
+        <!-- 8. Food & Markets -->
+        <a href="#" class="category-card bg-tan">
+          <div class="category-icon-wrapper">
+            <svg width="34" height="34" viewBox="0 0 24 24" fill="none" stroke="#c05621" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M12 3a9 9 0 0 0-9 9c0 4.97 4.03 9 9 9s9-4.03 9-9a9 9 0 0 0-9-9z"/>
+              <path d="M8 12c1.5 2 4.5 2 6 0"/>
+              <path d="M12 3v4"/>
+            </svg>
+          </div>
+          <span class="category-name">Food &amp; Markets</span>
+        </a>
+      </div>
+    </section>
+
+    <!-- ==========================================================================
+         4. POPULAR PLACES IN PUNE
+         ========================================================================== -->
+    <section class="popular-section">
+      <div class="section-header">
+        <h2 class="section-title">Popular Places in Pune</h2>
+        <div class="filter-nav">
+          <div class="segmented-control">
+            <button class="segmented-btn active" type="button">Popular</button>
+            <button class="segmented-btn" type="button">Nearby</button>
+            <button class="segmented-btn" type="button">Recommended</button>
+          </div>
+          <a href="#" class="see-all-link">See All →</a>
+        </div>
+      </div>
+
+      <div class="places-grid">
+        <!-- Card 1: Shaniwar Wada -->
+        <article class="place-card">
+          <div class="card-img-wrapper">
+            <img src="images/shaniwar-wada.jpg" alt="Shaniwar Wada" class="card-img">
+            <button class="favorite-btn" aria-label="Add to favorites">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#ffffff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l8.78-8.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"></path>
+              </svg>
+            </button>
+          </div>
+          <div class="card-content">
+            <h3 class="place-title">Shaniwar Wada</h3>
+            <div class="place-location">
+              <svg width="10" height="12" viewBox="0 0 14 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M7 0C4.238 0 2 2.238 2 5C2 8.75 7 16 7 16C7 16 12 8.75 12 5C12 2.238 9.762 0 7 0Z" fill="#6B7280"/>
+              </svg>
+              <span>Pune</span>
+            </div>
+            <div class="place-meta-row">
+              <div class="rating-badge">
+                <span>★</span> <span>4.6</span> <span class="reviews">(2.1k)</span>
+              </div>
+              <div class="time-badge">
+                <span>🕒</span> <span>9:00 AM – 5:30 PM</span>
+              </div>
+              <div class="price-tag">₹25</div>
+            </div>
+            <div class="card-actions">
+              <button class="btn-secondary" type="button">View Details</button>
+              <button class="btn-primary" type="button">Add to Trip</button>
+            </div>
+          </div>
+        </article>
+
+        <!-- Card 2: Aga Khan Palace -->
+        <article class="place-card">
+          <div class="card-img-wrapper">
+            <img src="images/aga-khan-palace.jpg" alt="Aga Khan Palace" class="card-img">
+            <button class="favorite-btn" aria-label="Add to favorites">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#ffffff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l8.78-8.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"></path>
+              </svg>
+            </button>
+          </div>
+          <div class="card-content">
+            <h3 class="place-title">Aga Khan Palace</h3>
+            <div class="place-location">
+              <svg width="10" height="12" viewBox="0 0 14 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M7 0C4.238 0 2 2.238 2 5C2 8.75 7 16 7 16C7 16 12 8.75 12 5C12 2.238 9.762 0 7 0Z" fill="#6B7280"/>
+              </svg>
+              <span>Pune</span>
+            </div>
+            <div class="place-meta-row">
+              <div class="rating-badge">
+                <span>★</span> <span>4.4</span> <span class="reviews">(1.8k)</span>
+              </div>
+              <div class="time-badge">
+                <span>🕒</span> <span>9:00 AM – 5:30 PM</span>
+              </div>
+              <div class="price-tag">₹25</div>
+            </div>
+            <div class="card-actions">
+              <button class="btn-secondary" type="button">View Details</button>
+              <button class="btn-primary" type="button">Add to Trip</button>
+            </div>
+          </div>
+        </article>
+
+        <!-- Card 3: Raja Dinkar Kelkar Museum -->
+        <article class="place-card">
+          <div class="card-img-wrapper">
+            <img src="images/kelkar-museum.jpg" alt="Raja Dinkar Kelkar Museum" class="card-img">
+            <button class="favorite-btn" aria-label="Add to favorites">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#ffffff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l8.78-8.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"></path>
+              </svg>
+            </button>
+          </div>
+          <div class="card-content">
+            <h3 class="place-title">Raja Dinkar Kelkar Museum</h3>
+            <div class="place-location">
+              <svg width="10" height="12" viewBox="0 0 14 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M7 0C4.238 0 2 2.238 2 5C2 8.75 7 16 7 16C7 16 12 8.75 12 5C12 2.238 9.762 0 7 0Z" fill="#6B7280"/>
+              </svg>
+              <span>Pune</span>
+            </div>
+            <div class="place-meta-row">
+              <div class="rating-badge">
+                <span>★</span> <span>4.7</span> <span class="reviews">(3.2k)</span>
+              </div>
+              <div class="time-badge">
+                <span>🕒</span> <span>10:00 AM – 6:00 PM</span>
+              </div>
+              <div class="price-tag">₹100</div>
+            </div>
+            <div class="card-actions">
+              <button class="btn-secondary" type="button">View Details</button>
+              <button class="btn-primary" type="button">Add to Trip</button>
+            </div>
+          </div>
+        </article>
+
+        <!-- Card 4: Sinhagad Fort -->
+        <article class="place-card">
+          <div class="card-img-wrapper">
+            <img src="images/sinhagad-fort.jpg" alt="Sinhagad Fort" class="card-img">
+            <button class="favorite-btn" aria-label="Add to favorites">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#ffffff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l8.78-8.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"></path>
+              </svg>
+            </button>
+          </div>
+          <div class="card-content">
+            <h3 class="place-title">Sinhagad Fort</h3>
+            <div class="place-location">
+              <svg width="10" height="12" viewBox="0 0 14 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M7 0C4.238 0 2 2.238 2 5C2 8.75 7 16 7 16C7 16 12 8.75 12 5C12 2.238 9.762 0 7 0Z" fill="#6B7280"/>
+              </svg>
+              <span>Pune</span>
+            </div>
+            <div class="place-meta-row">
+              <div class="rating-badge">
+                <span>★</span> <span>4.8</span> <span class="reviews">(5.1k)</span>
+              </div>
+              <div class="time-badge">
+                <span>🕒</span> <span>6:00 AM – 6:00 PM</span>
+              </div>
+              <div class="price-tag">₹20</div>
+            </div>
+            <div class="card-actions">
+              <button class="btn-secondary" type="button">View Details</button>
+              <button class="btn-primary" type="button">Add to Trip</button>
+            </div>
+          </div>
+        </article>
+      </div>
+    </section>
+
+    <!-- ==========================================================================
+         5. PLAN YOUR PERFECT TRIP + PLACES NEAR YOU
+         ========================================================================== -->
+    <section class="plan-map-section">
+      <!-- Left Column: Plan Your Perfect Trip -->
+      <div class="plan-trip-card">
+        <div class="plan-trip-header">
+          <h2 class="plan-title">Plan Your Perfect Trip</h2>
+          <p class="plan-subtitle">Tell us your preferences — we'll create the best itinerary for you.</p>
+        </div>
+
+        <div class="preferences-grid">
+          <!-- Select City -->
+          <div class="pref-pill">
+            <div class="pref-label">
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#073931" stroke-width="2">
+                <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path>
+                <circle cx="12" cy="10" r="3"></circle>
+              </svg>
+              <span>Select City</span>
+            </div>
+            <select class="pref-select" aria-label="Select City">
+              <option selected>Pune</option>
+              <option>Mumbai</option>
+              <option>Nashik</option>
+            </select>
+          </div>
+
+          <!-- Time -->
+          <div class="pref-pill">
+            <div class="pref-label">
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#073931" stroke-width="2">
+                <circle cx="12" cy="12" r="10"></circle>
+                <polyline points="12 6 12 12 16 14"></polyline>
+              </svg>
+              <span>Time</span>
+            </div>
+            <select class="pref-select" aria-label="Select Time">
+              <option selected>Full Day</option>
+              <option>Half Day</option>
+              <option>2 Days</option>
+            </select>
+          </div>
+
+          <!-- Budget -->
+          <div class="pref-pill">
+            <div class="pref-label">
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#073931" stroke-width="2">
+                <rect x="2" y="4" width="20" height="16" rx="2"></rect>
+                <line x1="6" y1="8" x2="6.01" y2="8"></line>
+                <line x1="10" y1="12" x2="18" y2="12"></line>
+              </svg>
+              <span>Budget</span>
+            </div>
+            <select class="pref-select" aria-label="Select Budget">
+              <option selected>₹1000</option>
+              <option>₹500</option>
+              <option>₹2500</option>
+            </select>
+          </div>
+
+          <!-- Interests -->
+          <div class="pref-pill">
+            <div class="pref-label">
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#073931" stroke-width="2">
+                <path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l8.78-8.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"></path>
+              </svg>
+              <span>Interests</span>
+            </div>
+            <select class="pref-select" aria-label="Select Interests">
+              <option selected>History</option>
+              <option>Nature</option>
+              <option>Food</option>
+            </select>
+          </div>
+        </div>
+
+        <button class="btn-create-trip" type="button" id="btn-create-trip" onclick="window.location.href='plan.html'">
+          <span>Create My Trip</span>
+          <span style="font-size: 18px;">→</span>
+        </button>
+
+        <!-- Heritage Line Art Illustration -->
+        <img src="images/heritage-lineart.svg" alt="Pune Heritage Line Art" class="heritage-illustration">
+      </div>
+
+      <!-- Right Column: Places Near You (Interactive Map) -->
+      <div class="map-column">
+        <div class="section-header">
+          <h2 class="section-title">Places Near You</h2>
+          <a href="#" class="see-all-link">View All on Map →</a>
+        </div>
+
+        <div class="map-card-wrapper">
+          <!-- Embedded Google Maps iframe -->
+          <iframe 
+            class="map-iframe"
+            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3783.248694080183!2d73.8530343758364!3d18.517623969262968!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bc2c06e408d669b%3A0xb3e6488d5e06497f!2sShaniwar%20Wada!5e0!3m2!1sen!2sin!4v1700000000000!5m2!1sen!2sin" 
+            allowfullscreen="" 
+            loading="lazy" 
+            referrerpolicy="no-referrer-when-downgrade"
+            title="Pune Places Map">
+          </iframe>
+
+          <!-- Visual Pin Overlays Matching Reference Image -->
+          <!-- 1. Shaniwar Wada -->
+          <div class="map-pin" style="top: 38px; left: 140px;">
+            <img src="images/shaniwar-thumb.jpg" alt="Shaniwar Wada" class="map-pin-thumb">
+            <span>Shaniwar Wada <span class="map-pin-dist">1.2 km</span></span>
+          </div>
+
+          <!-- 2. Aga Khan Palace -->
+          <div class="map-pin" style="top: 25px; right: 20px;">
+            <span class="map-pin-icon">📍</span>
+            <span>Aga Khan Palace <span class="map-pin-dist">4.8 km</span></span>
+            <img src="images/aga-khan-thumb.jpg" alt="Aga Khan Palace" class="map-pin-thumb">
+          </div>
+
+          <!-- 3. Lal Mahal -->
+          <div class="map-pin" style="top: 130px; left: 24px;">
+            <span class="map-pin-icon">📍</span>
+            <span>Lal Mahal <span class="map-pin-dist">0.8 km</span></span>
+          </div>
+
+          <!-- 4. Raja Dinkar Kelkar Museum -->
+          <div class="map-pin" style="top: 175px; left: 160px;">
+            <span class="map-pin-icon">📍</span>
+            <span>Raja Dinkar Kelkar Museum <span class="map-pin-dist">2.1 km</span></span>
+          </div>
+
+          <!-- 5. Saras Baug -->
+          <div class="map-pin" style="bottom: 40px; left: 110px;">
+            <span class="map-pin-icon">📍</span>
+            <span>Saras Baug <span class="map-pin-dist">2.4 km</span></span>
+          </div>
+
+          <!-- 6. Pataleshwar Cave Temple -->
+          <div class="map-pin" style="bottom: 25px; right: 30px;">
+            <img src="images/pataleshwar-thumb.jpg" alt="Pataleshwar" class="map-pin-thumb">
+            <span>Pataleshwar Cave Temple <span class="map-pin-dist">3.0 km</span></span>
+          </div>
+
+          <!-- Zoom controls -->
+          <div class="map-zoom-controls">
+            <button class="zoom-btn" type="button" aria-label="Zoom in">+</button>
+            <button class="zoom-btn" type="button" aria-label="Zoom out">−</button>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ==========================================================================
+         6. REVIEWS SECTION
+         ========================================================================== -->
+    <section class="reviews-section">
+      <div class="section-header">
+        <h2 class="section-title">What Our Explorers Say</h2>
+        <a href="#" class="see-all-link">See All Reviews →</a>
+      </div>
+
+      <div class="reviews-grid">
+        <!-- Review 1 -->
+        <article class="review-card">
+          <div class="reviewer-header">
+            <img src="images/avatar-aditya.jpg" alt="Aditya Kulkarni" class="reviewer-avatar">
+            <div>
+              <h3 class="reviewer-name">Aditya Kulkarni</h3>
+              <div class="star-rating">★★★★★</div>
+            </div>
+          </div>
+          <p class="review-text">"Bhatkanti made it so easy to plan my Pune trip. Loved the itinerary and ticket booking feature!"</p>
+        </article>
+
+        <!-- Review 2 -->
+        <article class="review-card">
+          <div class="reviewer-header">
+            <img src="images/avatar-sneha.jpg" alt="Sneha Deshmukh" class="reviewer-avatar">
+            <div>
+              <h3 class="reviewer-name">Sneha Deshmukh</h3>
+              <div class="star-rating">★★★★★</div>
+            </div>
+          </div>
+          <p class="review-text">"Clean interface, useful information and helped me discover places I never knew existed."</p>
+        </article>
+
+        <!-- Review 3 -->
+        <article class="review-card">
+          <div class="reviewer-header">
+            <img src="images/avatar-rohan.jpg" alt="Rohan Patil" class="reviewer-avatar">
+            <div>
+              <h3 class="reviewer-name">Rohan Patil</h3>
+              <div class="star-rating">★★★★★</div>
+            </div>
+          </div>
+          <p class="review-text">"Perfect for anyone who wants to actually explore the city, not just visit."</p>
+        </article>
+      </div>
+    </section>
+  </main>
+
+  <!-- ==========================================================================
+       7. FOOTER
+       ========================================================================== -->
+  <footer class="footer">
+    <div class="footer-container">
+      <div class="footer-top">
+        <!-- Left: Logo -->
+        <div class="footer-brand">
+          <img src="images/bhatkanti-logo.png" alt="Bhatkanti Footer Logo">
+        </div>
+
+        <!-- Middle: Nav Links -->
+        <nav class="footer-nav" aria-label="Footer Navigation">
+          <ul>
+            <li><a href="#">About</a></li>
+            <li><span style="color: rgba(255,255,255,0.4);">|</span></li>
+            <li><a href="#">Contact</a></li>
+            <li><span style="color: rgba(255,255,255,0.4);">|</span></li>
+            <li><a href="#">Privacy Policy</a></li>
+            <li><span style="color: rgba(255,255,255,0.4);">|</span></li>
+            <li><a href="#">Help</a></li>
+          </ul>
+        </nav>
+
+        <!-- Right: Social & Art -->
+        <div class="footer-right">
+          <div class="social-icons">
+            <!-- Instagram -->
+            <a href="#" class="social-icon" aria-label="Instagram">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <rect x="2" y="2" width="20" height="20" rx="5" ry="5"></rect>
+                <path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"></path>
+                <line x1="17.5" y1="6.5" x2="17.51" y2="6.5"></line>
+              </svg>
+            </a>
+            <!-- YouTube -->
+            <a href="#" class="social-icon" aria-label="YouTube">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M22.54 6.42a2.78 2.78 0 0 0-1.94-2C18.88 4 12 4 12 4s-6.88 0-8.6.46a2.78 2.78 0 0 0-1.94 2A29 29 0 0 0 1 11.75a29 29 0 0 0 .46 5.33A2.78 2.78 0 0 0 3.4 19c1.72.46 8.6.46 8.6.46s6.88 0 8.6-.46a2.78 2.78 0 0 0 1.94-2 29 29 0 0 0 .46-5.25 29 29 0 0 0-.46-5.33z"></path>
+                <polygon points="9.75 15.02 15.5 11.75 9.75 8.48 9.75 15.02"></polygon>
+              </svg>
+            </a>
+            <!-- Facebook -->
+            <a href="#" class="social-icon" aria-label="Facebook">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"></path>
+              </svg>
+            </a>
+            <!-- X / Twitter -->
+            <a href="#" class="social-icon" aria-label="X">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor">
+                <path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/>
+              </svg>
+            </a>
+          </div>
+
+          <img src="images/footer-skyline.svg" alt="Pune Skyline Art" class="footer-skyline-art">
+        </div>
+      </div>
+
+      <div class="footer-bottom">
+        <span>© 2026 Bhatkanti. All rights reserved.</span>
+        <span class="footer-quote">Places change. You should too.</span>
+      </div>
+    </div>
+  </footer>
+  <!-- JavaScript Engine for Multi-City Functionality -->
+  <script src="js/data.js"></script>
+  <script src="js/app.js"></script>
+  <script src="js/account.js"></script>
+</body>
+</html>
